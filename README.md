@@ -17,4 +17,4 @@ Injectable DLL that sets hardware breakpoints on NT functions.
 ### Preview
 Now there is a preview of how it works. (target process: "notepad.exe")
 
-![Image1](Anchor/Screenshots/DllInjection.jpg)
+![Image1](Screenshots/DllInjection.jpg)
