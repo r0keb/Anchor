@@ -4,29 +4,29 @@
 Injectable DLL that sets hardware breakpoints on NT functions.
 
 ### Functionality
-- Once is injected, it sets hardware breakpoint on NT functions.
-- After the call of any of the hooked functions, the execution flow goes to the "malicious code" which is a MessageBox for the POC.
-- Once our code is executed. The hardware breakpoints are cleaned and everything goes normally. (i chose to execute the custom code once for the POC, but it can be modified)
+- Once injected, the DLL sets hardware breakpoints on NT functions.
+- After any of the hooked functions are called, the execution flow is redirected to the "malicious code", which displays a MessageBox for the proof of concept (POC).
+- After executing our code, the hardware breakpoints are cleaned up, and the process continues normally. (I chose to execute the custom code only once for the POC, but this can be modified.)
 
 ### Disclaimer
-- There is no opsec (Dll and DllInjector) in the code, no CRT library removal, no indirect syscalls, no API hashing... This is because I only wanted to explore more in depth the hardware breakpoint hook on a remote process.
-- There is a Dll injector included:
-  - The code is not commented because it is not the main objective of this repo.
-  - It is a very precarious injector but again, it is not the main objective.
+- The code lacks operational security (opsec) measures (e.g., no removal of CRT libraries, no indirect syscalls, no API hashing). This is because the primary goal was to explore hardware breakpoint hooking on a remote process.
+- A DLL injector is included:
+  - The code is not commented (as it is in Archor), as it is not the main focus of this repository.
+  - It is a rudimentary injector, but again, this is not the main focus.
 
 ### Preview
-Now there is a preview of how it works.
+Here is a preview of how it works:
 
-1. First of all we need to choose the target process (in this case "notepad.exe") and load the Dll inside of it.
+1. First, choose the target process (in this case, "notepad.exe") and load the DLL into it. (You can use DllInjector or whatever injector you want)
   ![Image1](Screenshots/DllInjection.jpg)
 
-2. Once the Dll is loaded it is all done. We have to the hardware breakpoint is triggered so the custom code is executed.
+2. Target process and the dll loaded.
 ![Image2](Screenshots/LoadedDll.jpg)
 
-3. Triggering the Hardware Breakpoint...
+3. Triggering the hardware breakpoint...
 ![Image3](Screenshots/ExecutingTheHook.jpg)
 
-4. Done! The code is executed and the Process still running normally.
+4. Done! The code has been executed, and the process continues running normally.
 ![Image4](Screenshots/ExecutionCompleted.jpg)
 
 ### Credits
