@@ -18,16 +18,16 @@ Injectable DLL that sets hardware breakpoints on NT functions.
 Here is a preview of how it works:
 
 1. First, choose the target process (in this case, "notepad.exe") and load the DLL into it. (You can use DllInjector or any other injector you prefer)
-  ![Image1](img/DllInjection.jpg)
+![Image1](Img/DllInjection.jpg)
 
 2. Target process and the dll loaded.
-![Image2](img/LoadedDll.jpg)
+![Image2](Img/LoadedDll.jpg)
 
 3. Triggering the hardware breakpoint...
-![Image3](img/TriggeringTheHook.jpg)
+![Image3](Img/TriggeringTheHook.jpg)
 
 4. Done! The code has been executed, and the process continues running normally.
-![Image4](img/ExecutionCompleted.jpg)
+![Image4](Img/ExecutionCompleted.jpg)
 
 ### Credits
 - [Blindside: A New Technique for EDR Evasion with Hardware Breakpoints](https://cymulate.com/blog/blindside-a-new-technique-for-edr-evasion-with-hardware-breakpoints)
