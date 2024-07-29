@@ -17,7 +17,7 @@ Injectable DLL that sets hardware breakpoints on NT functions.
 ### Preview
 Here is a preview of how it works:
 
-1. First, choose the target process (in this case, "notepad.exe") and load the DLL into it. (You can use DllInjector or whatever injector you want)
+1. First, choose the target process (in this case, "notepad.exe") and load the DLL into it. (You can use DllInjector or any other injector you prefer)
   ![Image1](https://github.com/user-attachments/assets/78e16cc0-1a7a-4de0-9a62-b638bf2bf6e2)
 
 2. Target process and the dll loaded.
